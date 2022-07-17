@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
-import { Flex, Button, Stack } from "@chakra-ui/react";
-import { Input } from "../components/Form/Input";
+import type { NextPage } from 'next';
+import { Flex, Button, Stack } from '@chakra-ui/react';
+import { Input } from '../components/Form/Input';
 
 const SignIn: NextPage = () => {
   return (
