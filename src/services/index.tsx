@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 type user = {
   user: string;
   email: string;
-  created_at: string;
+  createdAt: string;
 };
 
 export function makeServer() {
@@ -16,13 +16,13 @@ export function makeServer() {
     factories: {
       user: Factory.extend({
         name() {
-          return { userName: faker.internet.userName() };
+          return faker.name.findName();
         },
         email() {
-          return { email: faker.internet.email().toLowerCase() };
+          return faker.internet.email().toLowerCase();
         },
         createdAt() {
-          return { registedAt: faker.date.recent(10) };
+          return faker.date.recent(10);
         },
       }),
     },

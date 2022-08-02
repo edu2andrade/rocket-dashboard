@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import Link from "next/link";
 
 import {
@@ -27,6 +25,7 @@ import { Sidebar } from "../../components/Sidebar";
 
 import { useQuery } from "@tanstack/react-query";
 
+
 type Users = {
   id: string;
   name: string;
@@ -52,9 +51,9 @@ export default function UserList() {
       };
     });
     return users;
+  }, {
+    staleTime: 1000 * 5, // 5 segundos
   });
-
-  console.log(data);
 
   const isWideVersion = useBreakpointValue({
     base: false,
