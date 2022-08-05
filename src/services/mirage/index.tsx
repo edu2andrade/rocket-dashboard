@@ -9,6 +9,9 @@ type user = {
 
 export function makeServer() {
   const server = createServer({
+
+    serializers: {},
+
     models: {
       user: Model.extend<Partial<user>>({}),
     },
@@ -53,6 +56,7 @@ export function makeServer() {
           )
       });
 
+      this.get("/users/:id");
       this.post("/users");
 
       this.namespace = "";  
