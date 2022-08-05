@@ -1,13 +1,15 @@
 import type { AppProps } from "next/app";
+
+import { SidebarDrawerProvider } from "../contexts/SidebarDrawerContext";
+import { makeServer } from "../services/mirage";
+
+import { QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { queryClient } from "../services/queryClient";
+
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../styles/theme";
 
-import { SidebarDrawerProvider } from "../contexts/SidebarDrawerContext";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-
-import { makeServer } from "../services/mirage";
-import { queryClient } from "../services/queryClient";
 
 if (process.env.NODE_ENV === "development") {
   makeServer();

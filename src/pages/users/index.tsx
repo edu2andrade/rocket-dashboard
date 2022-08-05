@@ -21,13 +21,15 @@ import {
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 
+
+import { queryClient } from "../../services/queryClient";
+import { useUsers } from "../../services/hooks/useUsers";
+
+import { api } from "../../services/api";
+
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
-
-import { useUsers } from "../../services/hooks/useUsers";
-import { queryClient } from "../../services/queryClient";
-import { api } from "../../services/api";
 
 export default function UserList() {
   const [page, setPage] = useState(1);

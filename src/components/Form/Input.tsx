@@ -1,10 +1,11 @@
+import { forwardRef, ForwardRefRenderFunction } from "react";
+
 import {
   FormControl,
   FormLabel,
   Input as ChakraInput,
   InputProps as ChakraInputProps,
 } from "@chakra-ui/react";
-import { forwardRef, ForwardRefRenderFunction } from "react";
 
 interface InputProps extends ChakraInputProps {
   name: string;
